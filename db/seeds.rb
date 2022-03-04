@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Author.destroy_all
+
+Author.create(name: "Isaac", age:38)
+Author.create(name:'Augustine', age:41)
+
+puts "seeded DB"
+puts "Author size is #{Author.all.size}"
+p Author.first 
