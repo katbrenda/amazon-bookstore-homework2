@@ -1,9 +1,17 @@
 Rails.application.routes.draw do
+  
   namespace :api do
-    resources :authors
-  end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+       
+   
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+     get 'authors', to:'authors#index'
+     post 'authors', to:'authors#create'
+     get 'authors/:id', to:'authors#show'
+     delete 'authors/:id', to:'authors#destroy'
+     put 'authors/:id', to:'authors#update'
+
+  
+     
+  end
 end
+
